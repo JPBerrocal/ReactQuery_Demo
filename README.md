@@ -3,7 +3,7 @@ Demo para aprender TanStack Query
 
 ## React + VITE + TS
 
-``` powershell
+```powershell
 npm install
 npm run dev
 ```
