@@ -1,21 +1,8 @@
-import { useQuery } from "@tanstack/react-query";
 import "./App.css";
-
-const getRandomNumber = async (): Promise<number> => {
-  const response = await fetch(
-    "https://www.random.org/integers/?num=1&min=1&max=500&col=1&base=10&format=plain&rnd=new"
-  );
-  const numberString = await response.text();
-
-  return +numberString;
-};
+import { useRandom } from "./hooks/useRandom";
 
 export const App = () => {
-  //
-  const query = useQuery({
-    queryKey: ["randomNumber"],
-    queryFn: getRandomNumber,
-  });
+  const query = useRandom();
 
   return (
     <>
